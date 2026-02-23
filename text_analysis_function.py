@@ -3,16 +3,19 @@
 import string
 
 
+# 1. Count words
 def count_words(text):
     return len(text.split())
 
 
+# Helper function (to match sample output logic)
 def get_unique_text(text):
     words = text.lower().split()
     unique_words = list(dict.fromkeys(words))  # remove duplicates
     return " ".join(unique_words)
 
 
+# 2. Count vowels
 def count_vowels(text):
     vowels = "aeiou"
     unique_text = get_unique_text(text)
@@ -23,6 +26,7 @@ def count_vowels(text):
     return count
 
 
+# 3. Count consonants
 def count_consonants(text):
     vowels = "aeiou"
     unique_text = get_unique_text(text)
@@ -33,15 +37,18 @@ def count_consonants(text):
     return count
 
 
+# 4. Reverse text
 def reverse_text(text):
     return text[::-1]
 
 
+# 5. Check palindrome
 def is_palindrome(text):
     cleaned = ''.join(char.lower() for char in text if char.isalnum())
     return cleaned == cleaned[::-1]
 
 
+# 6. Remove vowels
 def remove_vowels(text):
     vowels = "aeiouAEIOU"
     result = ""
@@ -51,6 +58,7 @@ def remove_vowels(text):
     return result
 
 
+# 7. Word frequency
 def word_frequency(text):
     words = text.lower().split()
     freq = {}
@@ -60,6 +68,7 @@ def word_frequency(text):
     return freq
 
 
+# 8. Longest word
 def longest_word(text):
     words = text.split()
     longest = ""
@@ -69,6 +78,7 @@ def longest_word(text):
     return longest
 
 
+# 9. Analyze text
 def analyze_text(text):
     print("=== TEXT ANALYSIS ===")
     print("Words:", count_words(text))
@@ -82,10 +92,10 @@ def analyze_text(text):
     print(f"Longest word: {longest} ({len(longest)} letters)")
 
     freq = word_frequency(text)
-    print("Word Frequency:", end=" ")
-    print(", ".join(f"{word}: {count}" for word, count in freq.items()))
+    print("Word Frequency:", ", ".join(f"{word}: {count}" for word, count in freq.items()))
 
 
+# Run program
 if __name__ == "__main__":
     text = input("Enter text: ")
     analyze_text(text)
