@@ -42,4 +42,4 @@ Challenges Faced:
    - Armstrong and Perfect number logic
 2. Matching the exact sample output format 
 3. Writing clean menu-driven programs without repeating code.
-4. Writing multiple functions in an organized manner.
+4. Writing multiple functions in an organized manner
